@@ -13,7 +13,7 @@ import { NotImplementedError } from '../extensions/index.js';
  * createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]) => 'LOO'
  *
  */
-export default function createDreamTeam(/* members */) {
+export default function createDreamTeam( members ) {
   let arr__members = [];
   let str__members = "";
 
