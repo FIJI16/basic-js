@@ -14,6 +14,30 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function createDreamTeam(/* members */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+  let arr__members = [];
+  let str__members = "";
+
+  if( Array.isArray(members) != true ) {
+      return false;
+  }
+
+  for( let i = 0; i < members.length; i++ ) {
+
+    if( typeof members[i] === "string" ) {
+
+      arr__members = arr__members.concat( members[i].replace(/\s/g, "").slice( 0, 1 ).toUpperCase() ).sort();
+
+    }
+
+  }
+
+  
+
+  for( let j = 0; j < arr__members.length; j++ ) {
+
+      str__members += arr__members[j];
+
+  }
+
+  return str__members;
 }
